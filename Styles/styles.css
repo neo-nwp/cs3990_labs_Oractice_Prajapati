@@ -88,10 +88,6 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
 /* Main Info Sections */
 .info-box {
   background-color: #ffffff;
@@ -154,9 +150,7 @@ footer {
   font-size: 14px;
 }
 
-.scroll-buttons button:hover {
-  background-color: #0056b3;
-}
+
 
 /* Gallery Images Section */
 .gallery {
@@ -196,9 +190,9 @@ footer {
 }
 
 .anime-info .image-container img:nth-child(2) {
-  border-color: green;
+  border-color: blue;
 }
 
 .anime-info .image-container img:nth-child(3) {
-  border-color: orange; 
+  border-color: blue; 
 }
