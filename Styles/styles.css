@@ -64,6 +64,18 @@ h2 {
 h3 {
   background-color: #e0e0e0; 
   padding: 10px;
+} /*font family*/
+
+h3.page2{
+  background-color: #e0e0e0;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h3.page3{
+  background-color: #e0e0e0;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 p {
@@ -150,49 +162,79 @@ footer {
   font-size: 14px;
 }
 
+.background-section {
+  background-image: url('../Favicons/wano.jpg'); 
+    background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; 
+  z-index: -1; 
+}
+
+
 
 
 /* Gallery Images Section */
-.gallery {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin-top: 20px;
+img {
+  border: 3px solid red;
 }
 
 .gallery img {
   width: 32%;
-  border-radius: 5px;
+  border-radius: 5px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-.anime-info .image-container {
-  text-align: center; /* Center the images */
-  margin-bottom: 20px; 
+.gallery .cs {
+  border: 3px solid #007BFF; 
 }
 
+.gallery .net {
+  border: 3px solid green;
+}
 
-.anime-info .wide-image img {
+.gallery .hack {
+  border: 3px solid purple;
+}
+
+.image-one {
+  display: block;
+  margin: 20px auto;
+  border: 3px solid green; 
+  width: 200px; 
+
+}
+
+.image-two {
+  display: block;
+  margin: 20px auto;
+  border: 3px solid blue;
   width: 400px;
 }
 
-/* add border and shadow to images */
-.anime-info .image-container img {
-  border-radius: 10px;
-  border: 3px solid #ddd; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.image-three {
+  display: block;
+  margin: 20px auto;
+  border: 3px solid purple; 
+  width: 300px; 
 }
 
-/* Specific image borders */
-.anime-info .image-container img:nth-child(1) {
+.google-icon {
+  border-color: red; 
+}
+
+.youtube-icon {
   border-color: blue; 
 }
 
-.anime-info .image-container img:nth-child(2) {
-  border-color: blue;
+.instagram-icon {
+  border-color: purple; 
 }
 
-.anime-info .image-container img:nth-child(3) {
-  border-color: blue; 
+.linkedin-icon {
+  border-color: green; 
 }
