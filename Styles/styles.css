@@ -7,7 +7,7 @@ body {
 
 
 header, nav, aside, main, footer {
-  padding: 20px;
+  padding: 3.5%;
   margin: 10px;  /* Margin is applied to all elements */
   border: 2px solid hsl(0, 0%, 0%);
   background-color: #d09cfc;
@@ -85,7 +85,7 @@ nav ul li a:hover {
   justify-content: space-between;
   align-items: stretch; /* Makes all children same height */
   gap: 10px;
-  min-height: calc(100vh - 300px); /* Adjust based on your header/footer height */
+  margin-bottom: 12%;
 }
 .left-side {
   width: 25%;
@@ -98,6 +98,7 @@ nav ul li a:hover {
   width: 25%;
   position: relative;
   top: -10px; /* Moves it up */
+  
 }
 
 /* Keep existing styles and add/modify these */
@@ -156,41 +157,55 @@ main {
   flex-direction: column;
 }
 .aside2 {
-  background-color: #ffebee;
+  background-color: #d09cfc;
+  ;
   padding: 20px;
   max-width: 500px;
-  margin: 20px;
+  margin: 10px;
 }
 
-.list-item {
-  position: relative;
-  background-color: #e57373;
-  margin-bottom: 10px;
-  padding: 10px;
+.aside2 ol {
+  background-color: rgb(235, 138, 138); /* Light background for the entire list */
+  margin: 1%;
+  padding: 3%;
+  border-radius: 10px; 
 }
 
-.list-item span {
+.aside2 li {
+  list-style-position: inside; 
+  background-color: rgb(235, 72, 72); /* Darker background for each list item */
+  margin: 1%;
+  padding: 0.5%; 
+  border-radius: 5px; 
+}
+
+.aside2 li::marker {
+  color: rgb(104, 6, 6); /* Darkest color for the list marker */
+  font-weight: bold;
+}
+
+.aside2 span {
   display: inline-block;
-  background-color: #d32f2f;
-  padding: 8px;
-  color: white;
+  background-color: rgb(173, 36, 36); /* Darkest background only under the text */
+  color: white; 
+  padding: 2px 8px; 
+  border-radius: 3px; 
 }
 
-.item-number {
-  margin-right: 10px;
-}
 .aside3 {
-  flex: 1;
+  
   max-width: auto;
-  margin: 20px;
-  width: 87%;
+  margin: 30px;
+  width: 90%;
   font-family: Arial, sans-serif;
 }
+
 
 .todo-container {
   background-color: #f5f5f5;
   border-radius: 4px;
   padding: 20px;
+  margin-bottom: 45%;
 }
 
 h2 {
@@ -227,12 +242,15 @@ h2 {
   background-repeat: no-repeat;
 }
 
-.todo-checkbox.unchecked {
-  background-image: url('toDo.png');
+.todo-checkbox {
+  display: inline-block;
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
 }
 
-.todo-checkbox.checked {
-  background-image: url('done.png');
+.todo-checkbox img {
+  width: 100%; /* Make sure the image fits within the span */
+  height: 100%; /* Ensure the image scales within the container */
 }
 
 .todo-text {
@@ -251,10 +269,10 @@ h2 {
 
 .fixed-block {
   position: fixed;
-  bottom: 50px;
+  bottom: 135px;
   right: 20px;
   width: 120px;
-  height: 120px;
+  height: px;
   border-radius: 50%;
 }
 
