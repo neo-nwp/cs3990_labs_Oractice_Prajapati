@@ -6,7 +6,7 @@
     <title>CSS Transformations & Transitions</title>
     <link rel="stylesheet" href="Styles/styles.css">
 </head>
-<body>
+<body id="top">
     <header>
         <nav>
             <a href="index.html">Home</a>
@@ -17,27 +17,47 @@
     </header>
 
     <main>
-        <h2>CSS Transformations & Transitions</h2>
+        <h1>CSS Transformations & Transitions</h1>
 
         <div id="div1">
-            <img src="Favicons/sample.jpg" class="move-right">
+            <img src="Images/sanji.png" class="move-right" alt="Sanji">
         </div>
 
         <div class="image-grid">
-            <img src="Favicons/sample.jpg" class="zoom-img">
-            <img src="Favicons/sample.jpg" class="zoom-img">
-            <img src="Favicons/sample.jpg" class="zoom-img">
-            <img src="Favicons/sample.jpg" class="zoom-img">
+            <img src="Images/loyd.jpg" class="zoom-img">
+            <img src="Images/loyd2.jpg" class="zoom-img">
+            <img src="Images/loyd 3.jpg" class="zoom-img">
+            <img src="Images/loyd 4.jpg" class="zoom-img">
         </div>
 
         <div class="diagonal-container">
-            <img src="Favicons/sample.jpg" class="move-diagonal">
+            <img src="Images/alicia.jpg" class="move-diagonal">
         </div>
 
-        <div class="rotate-section">
+        <div>
+            <span class="rotate-text">Let's rotate it!</span>
             <div class="circle-image"></div>
-            <p class="rotate-text">Let's rotate it!</p>
         </div>
+
+        <div class="effect-box">
+            <div class="effect-item border-effect"></div>
+            <div class="effect-item shadow-effect"></div>
+            <div class="effect-item opacity-effect"></div>
+            <div class="effect-item block-effect"></div>
+        </div>
+
+        <div class="gradient-button">
+            <button></button>
     </main>
+
+    <footer id="bottom">
+        <p>&copy; 2025 Neo Prajapati. All rights reserved.</p>
+    </footer>
+
+    <div class="scroll-buttons">
+        <a href="#bottom"><button>Bottom</button></a>
+        <a href="#top"><button>Top</button></a>
+    </div>
+
 </body>
 </html>
