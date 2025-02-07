@@ -238,3 +238,245 @@ img {
 .linkedin-icon {
   border-color: green; 
 }
+
+
+/*-----------------------------------------------------------*/
+/* #1. Image hover effects */
+.profile-pic:hover {
+  border: 5px solid red;
+}
+
+/* #2. First and Lasst Element styling */
+ol li:first-of-type {
+  color: blue;
+}
+
+p:last-child {
+  color: green;
+}
+
+/* #3. Negativce pseudo-class for lists */
+ul:not(.spec_item) {
+  font-family: "Courier New", monospace;
+}
+
+/* #4. Font size change in pg3 */
+.page3 p:not(.spec_p):not(:last-of-type) {
+  font-size: 20px; 
+}
+
+
+/* #5. Icons for top and bottonm*/
+.scroll-buttons a[href="#bottom"]:hover::after {
+  content: "👇";
+}
+
+.scroll-buttons a[href="#top"]:hover::after {
+  content: "👆";
+}
+
+/* #6. Icons before even para*/
+.page3  p:nth-of-type(even)::before {
+  content: "👉 ";
+  font-weight: bold;
+  color: #007BFF; /* Optional: Add a distinct color for visibility */
+  margin-right: 5px; /* Add spacing between the icon and text */
+}
+
+/* #7. Navigation chain styling*/
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+/* Add ">>" before the first link */
+nav a:first-of-type::before {
+  content: ">> ";
+  color: red;
+  font-weight: bold;
+}
+
+/* Add "/" between links */
+nav a:not(:first-of-type)::before {
+  content: " / ";
+  color: black;
+  font-weight: bold;
+}
+
+
+/* 8. Odd header styling*/
+h1:nth-of-type(odd),
+h3:nth-of-type(odd),
+h5:nth-of-type(odd) {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+h1:nth-of-type(odd)::before,
+h1:nth-of-type(odd)::after,
+h3:nth-of-type(odd)::before,
+h3:nth-of-type(odd)::after,
+h5:nth-of-type(odd)::before,
+h5:nth-of-type(odd)::after {
+  content: "";
+  height: 1px;
+  width: 100px;
+  background-color: #000;
+}
+
+
+/* 9. Dynamic background for even headers*/
+h2:nth-of-type(even) {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* #10. Gradient buttons*/
+.scroll-buttons button {
+  background: radial-gradient(circle, #8a116c, #0056b3);
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gradient-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  background: conic-gradient(from 0deg at 50% 50%, 
+      #FF0080,
+      #7928CA,
+      #FF0080
+  );
+  cursor: pointer;
+  width: 50%;
+}
+
+.gradient-button:hover {
+  opacity: 0.9;
+}
+
+
+/*Transition page*/
+/* Move Right on Hover */
+/* Section: CSS Transformations & Transitions */
+.move-right {
+  width: 300px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.move-right:hover {
+  transform: translateX(100px);
+}
+
+.image-grid {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.zoom-img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-img:hover {
+  transform: scale(3.3);
+}
+
+.move-diagonal {
+  width: 150px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.move-diagonal:hover {
+  transform: translate(100px, 100px);
+}
+
+.rotate-text {
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5em;
+  color: #555;
+  cursor: pointer;
+}
+
+.circle-image {
+  width: 100px;
+  height: 100px;
+  background: url('../Images/loyd rotate.jpg') no-repeat center/cover;
+  border-radius: 50%;
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotate-text:hover + .circle-image {
+  transform: rotate(180deg);
+}
+
+.effect-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.effect-item {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  transition: all 0.5s ease;
+}
+
+.border-effect {
+  background-color: #87CEFA;
+  border-top-left-radius: 15px;
+}
+
+.border-effect:hover {
+  background-color: #FFD700;
+  border-top-left-radius: 50px;
+}
+
+.shadow-effect {
+  background-color: #D2691E;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-effect:hover {
+  width: 120px;
+  height: 120px;
+}
+
+.opacity-effect {
+  background: url('../Images/pattern.jpeg');
+  background-size: cover;
+  opacity: 1;
+}
+
+.opacity-effect:hover {
+  opacity: 0.3;
+}
+
+.block-effect {
+  background-color: #FF6347;
+  border: 2px solid #000;
+}
+
+.block-effect:hover {
+  background-color: #FF6347;
+  border: 4px dashed #000;
+}
