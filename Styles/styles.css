@@ -1,482 +1,422 @@
-/* Universal Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #f9f9f9;
-  color: #333;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  padding: 20px;
-}
-
-
-/* Header Section */
-/* Float the profile image to the left */
-.float-left {
-  float: left; /* Float the image to the left */
-  margin-right: 20px; /* Add some space to the right of the image */
-  width: 150px; 
-  height: auto; 
-}
-
-.header::after {
-  content: "";
-  display: table;
-  clear: both; /* Clear floats */
-}
-
-/* Additional styles for the header */
-.header {
-  overflow: hidden; 
-  padding: 20px; 
-  background-color: #f0f0f0; 
-  border-radius: 8px; 
-}
-
-.profile {
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center vertically */
-}
-
-h1 {
-  margin: 0; 
-  font-size: 2rem; 
-  color: #333; 
-}
-
-.social-icons img {
-  margin-left: 10px; 
-}
-
-/* Center the headings horizontally */
-h2 {
-  text-align: center;
-  margin-bottom: 20px; /* Adjust space below the heading */
-  color: #007BFF; 
-  font-size: 1.5rem;
-  font-style: italic; 
-}
-
-h3 {
-  background-color: #e0e0e0; 
-  padding: 10px;
-} /*font family*/
-
-h3.page2{
-  background-color: #e0e0e0;
-  padding: 10px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-h3.page3{
-  background-color: #e0e0e0;
-  padding: 10px;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 30px; /* Line spacing for paragraphs */
-}
-
-p.no-red-line {
-  border: none; /* Remove red line for specific paragraphs */
-}
-
-p:not(.no-red-line) {
-  border-left: 5px solid red; /* Red line for paragraphs */
-  padding-left: 10px; /* Space between text and line */
-}
-
-nav a {
-  text-decoration: none;
-  margin: 0 10px;
-  color: #007BFF;
-  font-weight: bold;
-}
-
-/* Main Info Sections */
-.info-box {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-}
-
-.info-box h2 {
-  margin-bottom: 15px;
-  color: #007BFF;
-  font-size: 1.5rem;
-}
-
-.info-box p,
-.info-box ul {
-  margin-bottom: 10px;
-}
-
-.info-box ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.info-box a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.info-box a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 30px;
-}
-
-/* Scroll Buttons */
-.scroll-buttons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.scroll-buttons button {
-  padding: 10px 15px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.background-section {
-  background-image: url('../Favicons/wano.jpg'); 
-    background-size: cover; 
-  background-repeat: no-repeat;
-  background-position: center; 
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh; 
-  z-index: -1; 
-}
-
-
-
-
-/* Gallery Images Section */
-img {
-  border: 3px solid red;
-}
-
-.gallery img {
-  width: 32%;
-  border-radius: 5px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery .cs {
-  border: 3px solid #007BFF; 
-}
-
-.gallery .net {
-  border: 3px solid green;
-}
-
-.gallery .hack {
-  border: 3px solid purple;
-}
-
-.image-one {
-  display: block;
-  margin: 20px auto;
-  border: 3px solid green; 
-  width: 200px; 
-
-}
-
-.image-two {
-  display: block;
-  margin: 20px auto;
-  border: 3px solid blue;
-  width: 400px;
-}
-
-.image-three {
-  display: block;
-  margin: 20px auto;
-  border: 3px solid purple; 
-  width: 300px; 
-}
-
-.google-icon {
-  border-color: red; 
-}
-
-.youtube-icon {
-  border-color: blue; 
-}
-
-.instagram-icon {
-  border-color: purple; 
-}
-
-.linkedin-icon {
-  border-color: green; 
-}
-
-
-/*-----------------------------------------------------------*/
-/* #1. Image hover effects */
-.profile-pic:hover {
-  border: 5px solid red;
-}
-
-/* #2. First and Lasst Element styling */
-ol li:first-of-type {
-  color: blue;
-}
-
-p:last-child {
-  color: green;
-}
-
-/* #3. Negativce pseudo-class for lists */
-ul:not(.spec_item) {
-  font-family: "Courier New", monospace;
-}
-
-/* #4. Font size change in pg3 */
-.page3 p:not(.spec_p):not(:last-of-type) {
-  font-size: 20px; 
-}
-
-
-/* #5. Icons for top and bottonm*/
-.scroll-buttons a[href="#bottom"]:hover::after {
-  content: "👇";
-}
-
-.scroll-buttons a[href="#top"]:hover::after {
-  content: "👆";
-}
-
-/* #6. Icons before even para*/
-.page3  p:nth-of-type(even)::before {
-  content: "👉 ";
-  font-weight: bold;
-  color: #007BFF; /* Optional: Add a distinct color for visibility */
-  margin-right: 5px; /* Add spacing between the icon and text */
-}
-
-/* #7. Navigation chain styling*/
-nav a {
-  position: relative;
-  text-decoration: none;
-  color: #007BFF;
-  font-weight: bold;
-  margin: 0 5px;
-}
-
-/* Add ">>" before the first link */
-nav a:first-of-type::before {
-  content: ">> ";
-  color: red;
-  font-weight: bold;
-}
-
-/* Add "/" between links */
-nav a:not(:first-of-type)::before {
-  content: " / ";
-  color: black;
-  font-weight: bold;
-}
-
-
-/* 8. Odd header styling*/
-h1:nth-of-type(odd),
-h3:nth-of-type(odd),
-h5:nth-of-type(odd) {
+header {
+  background-color: #4B0082;
+  color: white;
   text-align: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  position: relative;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.left-sidebar {
+  width: 300px;
+  background-color: #8A2BE2;
+  padding: 1rem;
+  border-radius: 8px;
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+}
+
+.fact-item {
+  background-color: #9370DB;
+  color: white;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  word-wrap: break-word;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 1rem;
+}
+
+/* Tab styling */
+.tab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #4B0082;
+  display: flex;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-link {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: block;
+  position: relative;
+}
+
+.tab-link:hover {
+  background-color: #6A5ACD;
+}
+
+.tab-link.active {
+  background-color: #9370DB;
+}
+
+#Flag_map_of_Canada {
+  display: inline-block;
+  width: 70%;
+}
+
+/* Hide all tab content by default */
+.tab-content {
+  display: none;
+  padding: 2rem;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #4B0082;
+  min-width: 200px;
+  border-radius: 0 0 4px 4px;
+  list-style: none;
+  padding: 0;
+  z-index: 1000;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  color: white;
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background-color: #6A5ACD;
+}
+
+/* Add styles for the content panels */
+.submenu-content {
+  display: none;
+  padding: 2rem;
+}
+
+#public-holidays:target,
+#provincial-parks:target {
+  display: block;
+}
+
+/* Style for the panel titles */
+.submenu-content h2 {
+  color: #4B0082;
+  margin-bottom: 1rem;
+}
+
+/* Adjust first and last items for rounded corners */
+.submenu li:first-child a {
+  border-radius: 4px 4px 0 0;
+}
+
+.submenu li:last-child a {
+  border-radius: 0 0 4px 4px;
+}
+
+/* Add styles for the content panels */
+.submenu-content {
+  display: none;
+  padding: 2rem;
+}
+
+#public-holidays:target,
+#provincial-parks:target {
+  display: block;
+}
+
+/* Style for the panel titles */
+.submenu-content h2 {
+  color: #4B0082;
+  margin-bottom: 1rem;
+}
+
+/* Hide all tab content by default */
+.tab-content {
+  display: none;
+}
+
+/* Show the flag map by default */
+#Flag_map_of_Canada {
+  display: block;
+}
+
+/* Hide the image when any tab is targeted */
+#tab-home:target ~ #default-view #Flag_map_of_Canada,
+#tab-provinces:target ~ #default-view #Flag_map_of_Canada,
+#tab-alberta:target ~ #default-view #Flag_map_of_Canada {
+  display: none;
+}
+
+/* Show the targeted tab content */
+#tab-home:target,
+#tab-provinces:target,
+#tab-alberta:target {
+  display: block;
+}
+
+/* Province list styling */
+.provinces-list {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+  list-style: none;
+  padding: 0;
+}
+
+.province-item {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  gap: 1rem;
+  padding: 0.5rem 0;
 }
 
-h1:nth-of-type(odd)::before,
-h1:nth-of-type(odd)::after,
-h3:nth-of-type(odd)::before,
-h3:nth-of-type(odd)::after,
-h5:nth-of-type(odd)::before,
-h5:nth-of-type(odd)::after {
-  content: "";
-  height: 1px;
-  width: 100px;
-  background-color: #000;
+.province-flag {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
 }
 
-
-/* 9. Dynamic background for even headers*/
-h2:nth-of-type(even) {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
-}
-
-/* #10. Gradient buttons*/
-.scroll-buttons button {
-  background: radial-gradient(circle, #8a116c, #0056b3);
-  padding: 10px 15px;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.gradient-button {
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 16px;
-  background: conic-gradient(from 0deg at 50% 50%, 
-      #FF0080,
-      #7928CA,
-      #FF0080
-  );
-  cursor: pointer;
-  width: 50%;
-}
-
-.gradient-button:hover {
-  opacity: 0.9;
-}
-
-
-/*Transition page*/
-/* Move Right on Hover */
-/* Section: CSS Transformations & Transitions */
-.move-right {
-  width: 300px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.move-right:hover {
-  transform: translateX(100px);
-}
-
-.image-grid {
+.province-info {
   display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.zoom-img {
-  width: 100px;
-  height: 100px;
-  transition: transform 0.3s ease-in-out;
+.province-name {
+  font-weight: 500;
+  color: #333;
 }
 
-.zoom-img:hover {
-  transform: scale(3.3);
+.province-area {
+  display: none;
+  font-style: italic;
+  color: #666;
 }
 
-.move-diagonal {
-  width: 150px;
-  transition: transform 0.5s ease-in-out;
+.province-item:hover .province-area {
+  display: inline;
 }
 
-.move-diagonal:hover {
-  transform: translate(100px, 100px);
-}
-
-.rotate-text {
+.welcome-image {
+  max-width: 100%;
+  height: auto;
   display: block;
+  margin: 1rem auto;
+  border-radius: 4px;
+}
+
+.alberta-content {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.alberta-content ul {
+  list-style: inside;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+/* Holiday list styling */
+.holiday-list {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.holiday-item {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #4B0082;
+}
+
+.holiday-item h3 {
+  color: #4B0082;
+  margin-bottom: 0.5rem;
+}
+
+.holiday-item p {
+  color: #666;
+}
+
+/* Parks grid styling */
+.parks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.park-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.park-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.park-card h3 {
+  color: #4B0082;
+  padding: 1rem;
+  margin: 0;
+}
+
+.park-card p {
+  padding: 0 1rem 1rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .parks-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+.right {
+  background-color:#a550cf;
+  color: #ffffff;
   text-align: center;
-  margin: 20px 0;
-  font-size: 1.5em;
-  color: #555;
-  cursor: pointer;
 }
 
-.circle-image {
-  width: 100px;
-  height: 100px;
-  background: url('../Images/loyd rotate.jpg') no-repeat center/cover;
-  border-radius: 50%;
-  display: inline-block;
-  transition: transform 0.5s ease-in-out;
+.right section{
+    float: left;
+    padding: 2%;
+    font-size: 0.7em;
+    margin: auto;
+    margin-bottom: 1%;
+    min-height: 250px;
 }
 
-.rotate-text:hover + .circle-image {
-  transform: rotate(180deg);
+.top {
+    border: 3px double #666;
+    background-color: #9723d1;
+    color: #fff;
+    text-align: center;
+    min-height: 80px;
+    padding:1%;
+    border-top-right-radius: 20px;
 }
 
-.effect-box {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+.promo {
+    width: 80%;
+    text-align: left;
+    text-transform: uppercase;
+    border-radius: 0 15px 15px 0;
 }
 
-.effect-item {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  transition: all 0.5s ease;
+.new{
+    background-color: rgb(153, 248, 58);
+    color:rgb(15, 104, 3);
+    font-weight: bold;
 }
 
-.border-effect {
-  background-color: #87CEFA;
-  border-top-left-radius: 15px;
+.popular{
+    background-color: rgb(143, 6, 6);
+    font-weight: bold;
 }
 
-.border-effect:hover {
-  background-color: #FFD700;
-  border-top-left-radius: 50px;
+
+.salary {
+    text-align: right;
+    font-weight: bold;
 }
 
-.shadow-effect {
-  background-color: #D2691E;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+.salary::before{
+    content: '$';
 }
 
-.shadow-effect:hover {
-  width: 120px;
-  height: 120px;
+.salary::after{
+    content: ' an hour';
+    font-style: italic;
 }
 
-.opacity-effect {
-  background: url('../Images/pattern.jpeg');
-  background-size: cover;
-  opacity: 1;
+footer {
+  background-color: #9370DB;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
 }
 
-.opacity-effect:hover {
-  opacity: 0.3;
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .left-sidebar,
+  .right-sidebar {
+      width: 250px;
+  }
 }
 
-.block-effect {
-  background-color: #FF6347;
-  border: 2px solid #000;
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+      width: 100%;
+      position: static;
+  }
 }
 
-.block-effect:hover {
-  background-color: #FF6347;
-  border: 4px dashed #000;
+/* Mobile First - For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+.col-1,.col-3 {width: 25%;}
+.col-2 {width: 50%;}
+.col-4 {width: 50%;}
 }
