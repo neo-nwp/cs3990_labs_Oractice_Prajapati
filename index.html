@@ -3,376 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Canada</title>
+    <title>CS NWP Programs</title>
     <link rel="stylesheet" href="Styles/styles.css" />
   </head>
   <body>
-    <header>
-      <h1>About Canada</h1>
+    <header class="header">
+      <div class="banner">
+        <h1>Computer Science is your dream?</h1>
+        <p>
+          Our leading-edge programs offer practical connections at every step,
+          balancing classroom theory and hands-on learning to produce confident,
+          knowledgeable and skilled professionals.
+        </p>
+        <a href="#programs" class="btn">Browse NWP programs</a>
+      </div>
     </header>
 
-    <div class="container">
-      <!-- Left Sidebar -->
-      <div class="left-sidebar">
-        <div class="fact-item">Canada is actually HUGE</div>
-        <div class="fact-item">
-          71% of the world's maple syrup comes from Canada
+    <section id="programs" class="programs-grid">
+      <div class="program-card">
+        <div class="image-container">
+          <img src="Images/prog1.jpg" alt="Program 1" />
+          <h2>Computer Systems Technology (Certificate)</h2>
         </div>
-        <div class="fact-item">
-          The Canada-US border is the longest international border between two
-          countries in the world
-        </div>
-        <div class="fact-item">The country spans six different time zones</div>
-        <div class="fact-item">
-          The country has more lakes than the rest of the world combined
-        </div>
+        <p>
+          Computer professionals must have good reasoning and logical problem
+          solving abilities, be observant, alert to detail and transactions in
+          pursuing problems to completion.
+        </p>
+        <a href="#program1" class="btn">View NWP videos</a>
       </div>
+      <div class="program-card">
+        <div class="image-container">
+          <img src="Images/prog2.jpg" alt="Program 2" />
+          <h2>Computer Systems Technology (Diploma)</h2>
+        </div>
+        <p>
+          The Computing Science programs at Northwestern Polytechnic offer
+          students an opportunity to integrate extensive software development
+          skills with hardware skills.
+        </p>
+        <a href="#program2" class="btn">View NWP videos</a>
+      </div>
+      <div class="program-card">
+        <div class="image-container">
+          <img src="Images/prog3.jpg" alt="Program 3" />
+          <h2>Bachelor of Computing Science (Degree)</h2>
+        </div>
+        <p>
+          The Bachelor of Computing Science program gives learners a solid
+          foundation in the technical, communications and management skills
+          needed to excel as a computing science professional.
+        </p>
+        <a href="#program3" class="btn">View NWP videos</a>
+      </div>
+    </section>
 
-      <!-- Main Content (Tab Content) -->
-      <div class="main-content">
-        <!-- Tab Links - at the top -->
-        <div class="tabs">
-          <ul class="tab-list">
-            <li><a href="#tab-home" class="tab-link">Home</a></li>
-            <li>
-              <a href="#tab-provinces" class="tab-link"
-                >Provinces and Territories</a
-              >
-            </li>
-            <li class="has-submenu">
-              <a href="#tab-alberta" class="tab-link">My Alberta</a>
-              <ul class="submenu">
-                <li><a href="#public-holidays">Public holidays</a></li>
-                <li><a href="#provincial-parks">Provincial parks</a></li>
-              </ul>
-            </li>
-          </ul>
+    <section class="gallery">
+      <div class="course-item">
+        <div class="course-image">
+          <img src="Images/course1.jpeg" alt="Introduction to Computing Science" />
         </div>
-
-        <!-- Tab Content -->
-        <div class="tab-content" id="tab-home">
-          <h2>Welcome to Canada</h2>
-          <p>
-            Discover the beauty and diversity of Canada, a country that spans
-            from coast to coast to coast.
-          </p>
-          <img
-            src="Images/canada_map_outline.jpg"
-            alt="Welcome to Canada"
-            class="welcome-image"
-          />
-          <p>
-            Canada is a vast and diverse country, known for its stunning
-            landscapes, multicultural society, and high quality of life. From
-            the rugged Rocky Mountains to the pristine Atlantic coastline,
-            Canada offers endless opportunities for adventure and exploration.
-          </p>
-          <p>
-            As the second-largest country in the world, Canada is home to
-            vibrant cities like Toronto, Vancouver, and Montreal, each offering
-            a unique blend of culture, history, and modern innovation. The
-            country is also famous for its friendly people, strong economy, and
-            world-class education system.
-          </p>
-          <p>
-            Whether you’re here to experience the breathtaking Northern Lights,
-            explore the rich Indigenous heritage, or enjoy the lively festivals
-            and cuisines, Canada welcomes you with open arms.
-          </p>
-        </div>
-
-        <div class="tab-content" id="tab-provinces">
-          <h2>Provinces and Territories of Canada</h2>
-          <p>
-            Canada is made up of 10 provinces and 3 territories, each with its
-            unique culture and landscape.
-          </p>
-          <ul class="provinces-list">
-            <li class="province-item">
-              <img
-                src="Images/alberta_flag.jpg"
-                alt="Alberta flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">Alberta</span>
-                <span class="province-area">Area: 661,848 km²</span>
-              </div>
-            </li>
-            <li class="province-item">
-              <img
-                src="Images/ontario_flag.jpg"
-                alt="Ontario flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">Ontario</span>
-                <span class="province-area">Area: 1,076,395 km²</span>
-              </div>
-            </li>
-            <li class="province-item">
-              <img
-                src="Images/british_columbia_flag.jpg"
-                alt="British Columbia flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">British Columbia</span>
-                <span class="province-area">Area: 944,735 km²</span>
-              </div>
-            </li>
-            <li class="province-item">
-              <img
-                src="Images/manitoba_flag.jpg"
-                alt="Manitoba flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">Manitoba</span>
-                <span class="province-area">Area: 647,797 km²</span>
-              </div>
-            </li>
-            <li class="province-item">
-              <img
-                src="Images/new_brunswick__flag.jpg"
-                alt="New Brunswick flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">New Brunswick</span>
-                <span class="province-area">Area: 72,908 km²</span>
-              </div>
-            </li>
-            <li class="province-item">
-              <img
-                src="Images/newfoundland_labrador_flag.jpg"
-                alt="Newfoundland and Labrador flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">Newfoundland and Labrador</span>
-                <span class="province-area">Area: 405,212 km²</span>
-              </div>
-            </li>
-            <li class="province-item">
-              <img
-                src="Images/noca_scotia_flag.jpg"
-                alt="Nova Scotia flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">Nova Scotia</span>
-                <span class="province-area">Area: 55,284 km²</span>
-              </div>
-            </li>
-            <li class="province-item">
-              <img
-                src="Images/prince_edward_island_flag.jpg"
-                alt="Prince Edward Island flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">Prince Edward Island</span>
-                <span class="province-area">Area: 5,660 km²</span>
-              </div>
-            </li>
-            <li class="province-item">
-              <img
-                src="Images/quebec_flag.jpg"
-                alt="Quebec flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">Quebec</span>
-                <span class="province-area">Area: 1,542,056 km²</span>
-              </div>
-            </li>
-            <li class="province-item">
-              <img
-                src="Images/saskatchewan_flag.jpg"
-                alt="Saskatchewan flag"
-                class="province-flag"
-              />
-              <div class="province-info">
-                <span class="province-name">Saskatchewan</span>
-                <span class="province-area">Area: 651,036 km²</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tab-content" id="tab-alberta">
-          <h2>My Alberta</h2>
-          <p>
-            Alberta is a province of contrasts, from the Rocky Mountains to the
-            prairie grasslands.
-          </p>
-          <div class="alberta-content">
-            <h3>About Alberta</h3>
-            <p>
-              Alberta is known for its natural beauty, diverse wildlife, and
-              rich cultural heritage.
-            </p>
-            <ul>
-              <li>Capital: Edmonton</li>
-              <li>Largest City: Calgary</li>
-              <li>Population: Over 4 million</li>
-              <li>Area: 661,848 km²</li>
-              <li>Official Language: English</li>
-              <li>
-                Known for: Rocky Mountains, Oil Sands, Dinosaur Provincial Park
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="submenu-content" id="public-holidays">
-          <h2>Alberta Public Holidays</h2>
-          <div class="holiday-list">
-            <div class="holiday-item">
-              <h3>New Year's Day</h3>
-              <p>January 1, 2025</p>
-            </div>
-            <div class="holiday-item">
-              <h3>Family Day</h3>
-              <p>February 17, 2025</p>
-            </div>
-            <div class="holiday-item">
-              <h3>Good Friday</h3>
-              <p>April 18, 2025</p>
-            </div>
-            <div class="holiday-item">
-              <h3>Victoria Day</h3>
-              <p>May 19, 2025</p>
-            </div>
-            <div class="holiday-item">
-              <h3>Canada Day</h3>
-              <p>July 1, 2025</p>
-            </div>
-            <div class="holiday-item">
-              <h3>Heritage Day</h3>
-              <p>August 4, 2025</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="submenu-content" id="provincial-parks">
-          <h2>Alberta Provincial Parks</h2>
-          <div class="parks-grid">
-            <div class="park-card">
-              <img
-                src="Images/banff.jpeg"
-                alt="Banff National Park"
-                class="park-image"
-              />
-              <h3>Banff National Park</h3>
-              <p>
-                Canada's oldest national park, featuring stunning mountain
-                landscapes, hot springs, and diverse wildlife.
-              </p>
-            </div>
-            <div class="park-card">
-              <img
-                src="Images/jasper.jpeg"
-                alt="Jasper National Park"
-                class="park-image"
-              />
-              <h3>Jasper National Park</h3>
-              <p>
-                Home to majestic peaks, glaciers, lakes, and the Columbia
-                Icefield.
-              </p>
-            </div>
-            <div class="park-card">
-              <img
-                src="Images/waterton.jpeg"
-                alt="Waterton Lakes National Park"
-                class="park-image"
-              />
-              <h3>Waterton Lakes National Park</h3>
-              <p>
-                Where the prairies meet the mountains, featuring unique
-                landscapes and wildlife.
-              </p>
-            </div>
-            <div class="park-card">
-              <img
-                src="Images/elk.jpeg"
-                alt="Elk Island National Park"
-                class="park-image"
-              />
-              <h3>Elk Island National Park</h3>
-              <p>
-                A refuge for bison and elk, perfect for wildlife viewing and
-                stargazing.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div id="default-view">
-            <img id="Flag_map_of_Canada" src="Images/canada_map_outline.jpg" alt="Flag of Canada">
+        <h3>Introduction to Computing Science</h3>
+        <div class="course-info">
+          <p>Credits - 3</p>
+          <p>Total Hours - 90</p>
         </div>
       </div>
       
-
-      <!-- Right Sidebar -->
-      <div class="col-3 right">
-        <h3>IT jobs & work opportunities</h3>
-
-        <section class="col-4">
-          <article class="jobs">
-            <div class="top">
-              <div class="promo popular">Most popular</div>
-              <h3>Cybersecurity Analyst</h3>
-            </div>
-          </article>
-          <p>
-            A Cyber Security Analyst plays a crucial role in protecting an
-            organization's digital infrastructure from cyber threats. They
-            monitor networks, analyze security risks, and implement measures to
-            prevent data breaches and cyberattacks.
-          </p>
-          <div class="salary">52.03</div>
-        </section>
-
-        <section class="col-4">
-          <article class="jobs">
-            <div class="top">
-              <div class="promo new">New</div>
-              <h3>IT Technician</h3>
-            </div>
-          </article>
-          <p>
-            An IT Technician is responsible for maintaining and troubleshooting
-            computer systems, networks, and hardware to ensure smooth operations
-            in an organization. They play a vital role in providing technical
-            support, installing software, and fixing IT-related issues.
-          </p>
-          <div class="salary">38.5</div>
-        </section>
-
-        <section class="col-4">
-          <article class="jobs">
-            <div class="top">
-              <div class="promo new">New</div>
-              <h3>Senior Business IT analyst</h3>
-            </div>
-          </article>
-          <p>
-            A Senior Business IT Analyst plays a key role in aligning business
-            goals with technology solutions. They analyze business processes,
-            identify technology needs, and ensure IT systems effectively support
-            organizational objectives.
-          </p>
-          <div class="salary">120.0</div>
-        </section>
-        
+      <div class="course-item">
+        <div class="course-image">
+          <img src="Images/course2.jpg" alt="Elementary Data Structures" />
+        </div>
+        <h3>Elementary Data Structures</h3>
+        <div class="course-info">
+          <p>Credits - 3</p>
+          <p>Total Hours - 45</p>
+        </div>
       </div>
       
-    </div>
+      <div class="course-item">
+        <div class="course-image">
+          <img src="Images/course3.jpeg" alt="Introduction to Applied Statistics I" />
+        </div>
+        <h3>Introduction to Applied Statistics I</h3>
+        <div class="course-info">
+          <p>Credits - 3</p>
+          <p>Total Hours - 45</p>
+        </div>
+      </div>
     
+      <div class="course-item">
+        <div class="course-image">
+          <img src="Images/course4.jpeg" alt="Practical Programming Methodology" />
+        </div>
+        <h3>Practical Programming Methodology</h3>
+        <div class="course-info">
+          <p>Credits - 3</p>
+          <p>Total Hours - 45</p>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p>© 2025 | Neo All rights reserved</p>
+    <footer class="footer">
+      <p>&copy; 2025 CS NWP Programs</p>
+      <p>Made for NWP with ❤️ and CSS Grid</p>
     </footer>
   </body>
 </html>
