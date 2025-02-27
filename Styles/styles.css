@@ -7,416 +7,183 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-header {
-  background-color: #4B0082;
-  color: white;
+.header {
+  background: url('../Images/cs_bg.jpeg') no-repeat center center/cover;
+  color: rgb(255, 255, 255);
+  padding: 100px 20px;
   text-align: center;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.container {
-  display: flex;
-  flex: 1;
-  position: relative;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.left-sidebar {
-  width: 300px;
-  background-color: #8A2BE2;
-  padding: 1rem;
-  border-radius: 8px;
-  height: fit-content;
-  position: sticky;
-  top: 80px;
-}
-
-.fact-item {
-  background-color: #9370DB;
-  color: white;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-  word-wrap: break-word;
-}
-
-.main-content {
-  flex: 1;
-  min-width: 0;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-top: 1rem;
-}
-
-/* Tab styling */
-.tab-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #4B0082;
-  display: flex;
-  border-radius: 8px 8px 0 0;
-}
-
-.tab-link {
-  color: white;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  display: block;
   position: relative;
 }
-
-.tab-link:hover {
-  background-color: #6A5ACD;
+.banner {
+  position: relative;
+  z-index: 1;
 }
 
-.tab-link.active {
-  background-color: #9370DB;
+.banner h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-#Flag_map_of_Canada {
+.banner p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-link {
   display: inline-block;
-  width: 70%;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-/* Hide all tab content by default */
-.tab-content {
-  display: none;
-  padding: 2rem;
+.nav-link:hover {
+  background: #2980b9;
+  color: #ecf0f1;
 }
 
-.has-submenu {
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db; /* Default blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.btn:hover {
+    background-color: #a3d5ff; /* Light blue on hover */
+    color: rgba(0, 0, 0, 0.7); /* Transparent black text */
+}
+
+.program-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-card .image-container {
   position: relative;
+  margin-bottom: 1rem;
 }
 
-.submenu {
-  display: none;
+.program-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 8px; /* Rounded top-left corner */
+  border-top-right-radius: 8px;
+}
+
+.program-card h2 {
   position: absolute;
-  top: 100%;
+  bottom: 0;
   left: 0;
-  background-color: #4B0082;
-  min-width: 200px;
-  border-radius: 0 0 4px 4px;
-  list-style: none;
-  padding: 0;
-  z-index: 1000;
-}
-
-.has-submenu:hover .submenu {
-  display: block;
-}
-
-.submenu a {
+  right: 0;
   color: white;
   padding: 1rem;
-  display: block;
-  text-decoration: none;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0;
 }
 
-.submenu a:hover {
-  background-color: #6A5ACD;
+.program-card p {
+  margin-top: 0.5rem;
 }
 
-/* Add styles for the content panels */
-.submenu-content {
-  display: none;
-  padding: 2rem;
-}
-
-#public-holidays:target,
-#provincial-parks:target {
-  display: block;
-}
-
-/* Style for the panel titles */
-.submenu-content h2 {
-  color: #4B0082;
-  margin-bottom: 1rem;
-}
-
-/* Adjust first and last items for rounded corners */
-.submenu li:first-child a {
-  border-radius: 4px 4px 0 0;
-}
-
-.submenu li:last-child a {
-  border-radius: 0 0 4px 4px;
-}
-
-/* Add styles for the content panels */
-.submenu-content {
-  display: none;
-  padding: 2rem;
-}
-
-#public-holidays:target,
-#provincial-parks:target {
-  display: block;
-}
-
-/* Style for the panel titles */
-.submenu-content h2 {
-  color: #4B0082;
-  margin-bottom: 1rem;
-}
-
-/* Hide all tab content by default */
-.tab-content {
-  display: none;
-}
-
-/* Show the flag map by default */
-#Flag_map_of_Canada {
-  display: block;
-}
-
-/* Hide the image when any tab is targeted */
-#tab-home:target ~ #default-view #Flag_map_of_Canada,
-#tab-provinces:target ~ #default-view #Flag_map_of_Canada,
-#tab-alberta:target ~ #default-view #Flag_map_of_Canada {
-  display: none;
-}
-
-/* Show the targeted tab content */
-#tab-home:target,
-#tab-provinces:target,
-#tab-alberta:target {
-  display: block;
-}
-
-/* Province list styling */
-.provinces-list {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #eee;
-  list-style: none;
-  padding: 0;
-}
-
-.province-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 0;
-}
-
-.province-flag {
-  width: 30px;
-  height: auto;
-  vertical-align: middle;
-}
-
-.province-info {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.province-name {
-  font-weight: 500;
-  color: #333;
-}
-
-.province-area {
-  display: none;
-  font-style: italic;
-  color: #666;
-}
-
-.province-item:hover .province-area {
-  display: inline;
-}
-
-.welcome-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 4px;
-}
-
-.alberta-content {
-  background-color: #f5f5f5;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
-
-.alberta-content ul {
-  list-style: inside;
-  margin-top: 1rem;
-  margin-left: 1rem;
-}
-
-/* Holiday list styling */
-.holiday-list {
-  display: grid;
-  gap: 1rem;
-  padding: 1rem 0;
-}
-
-.holiday-item {
-  background-color: #f5f5f5;
-  padding: 1rem;
-  border-radius: 4px;
-  border-left: 4px solid #4B0082;
-}
-
-.holiday-item h3 {
-  color: #4B0082;
-  margin-bottom: 0.5rem;
-}
-
-.holiday-item p {
-  color: #666;
-}
-
-/* Parks grid styling */
-.parks-grid {
+.programs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 1rem 0;
+  padding: 2rem;
+  flex-grow: 1;
 }
 
-.park-card {
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.park-image {
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
   width: 100%;
-  height: 200px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.course-image {
+  width: 100%;
+  height: 150px;
+  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.park-card h3 {
-  color: #4B0082;
-  padding: 1rem;
+.course-item:hover .course-image {
+  transform: scale(1.2);
+  z-index: 1;
+  transform-origin: center center;
+}
+
+.course-item h3 {
+  font-size: clamp(0.8rem, 2vw, 1rem);
   margin: 0;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
 }
 
-.park-card p {
-  padding: 0 1rem 1rem;
+.course-info {
+  display: none;
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
   color: #666;
+  position: relative;
+  z-index: 2;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .parks-grid {
-      grid-template-columns: 1fr;
-  }
+.course-info p {
+  margin: 0;
+  line-height: 1.2;
 }
 
-
-.right {
-  background-color:#a550cf;
-  color: #ffffff;
-  text-align: center;
+.course-item:hover .course-info {
+  display: block;
 }
-
-.right section{
-    float: left;
-    padding: 2%;
-    font-size: 0.7em;
-    margin: auto;
-    margin-bottom: 1%;
-    min-height: 250px;
-}
-
-.top {
-    border: 3px double #666;
-    background-color: #9723d1;
-    color: #fff;
-    text-align: center;
-    min-height: 80px;
-    padding:1%;
-    border-top-right-radius: 20px;
-}
-
-.promo {
-    width: 80%;
-    text-align: left;
-    text-transform: uppercase;
-    border-radius: 0 15px 15px 0;
-}
-
-.new{
-    background-color: rgb(153, 248, 58);
-    color:rgb(15, 104, 3);
-    font-weight: bold;
-}
-
-.popular{
-    background-color: rgb(143, 6, 6);
-    font-weight: bold;
-}
-
-
-.salary {
-    text-align: right;
-    font-weight: bold;
-}
-
-.salary::before{
-    content: '$';
-}
-
-.salary::after{
-    content: ' an hour';
-    font-style: italic;
-}
-
-footer {
-  background-color: #9370DB;
+.footer {
+  background: #000051;
   color: white;
-  text-align: center;
+  font-size: small;
   padding: 1rem;
-  margin-top: auto;
-}
-
-
-/* Responsive design */
-@media (max-width: 1024px) {
-  .left-sidebar,
-  .right-sidebar {
-      width: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-  }
-
-  .left-sidebar,
-  .right-sidebar {
-      width: 100%;
-      position: static;
-  }
-}
-
-/* Mobile First - For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-}
-
-/* For desktop: */
-@media only screen and (min-width: 768px) {
-.col-1,.col-3 {width: 25%;}
-.col-2 {width: 50%;}
-.col-4 {width: 50%;}
+  display: flex;
+  justify-content: space-between; /* This aligns the items to the left and right */
+  align-items: center; /* This vertically centers the text */
 }
