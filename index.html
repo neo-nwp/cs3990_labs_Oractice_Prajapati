@@ -1,116 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CS NWP Programs</title>
-    <link rel="stylesheet" href="Styles/styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="banner">
-        <h1>Computer Science is your dream?</h1>
-      </div>
-      <div class="banner">
-        <p>
-          Our leading-edge programs offer practical connections at every step,
-          balancing classroom theory and hands-on learning to produce confident,
-          knowledgeable and skilled professionals.
-        </p>
-        <a href="#programs" class="btn">Browse NWP programs</a>
-      </div>
-    </header>
-
-    <section id="programs" class="programs-grid">
-      <div class="program-card">
-        <div class="image-container">
-          <img src="Images/prog1.jpg" alt="Program 1" />
-          <h2>Computer Systems Technology (Certificate)</h2>
-        </div>
-        <p>
-          Computer professionals must have good reasoning and logical problem
-          solving abilities, be observant, alert to detail and transactions in
-          pursuing problems to completion.
-        </p>
-        <a href="#program1" class="btn">View NWP videos</a>
-      </div>
-      
-      <div class="program-card">
-        <div class="image-container">
-          <img src="Images/prog2.jpg" alt="Program 2" />
-          <h2>Computer Systems Technology (Diploma)</h2>
-        </div>
-        <p>
-          The Computing Science programs at Northwestern Polytechnic offer
-          students an opportunity to integrate extensive software development
-          skills with hardware skills.
-        </p>
-        <a href="#program2" class="btn">View NWP videos</a>
-      </div>
-      <div class="program-card">
-        <div class="image-container">
-          <img src="Images/prog3.jpg" alt="Program 3" />
-          <h2>Bachelor of Computing Science (Degree)</h2>
-        </div>
-        <p>
-          The Bachelor of Computing Science program gives learners a solid
-          foundation in the technical, communications and management skills
-          needed to excel as a computing science professional.
-        </p>
-        <a href="#program3" class="btn">View NWP videos</a>
-      </div>
-      
-    </section>
-
-    <section class="gallery">
-      <div class="course-item">
-        <div class="course-image">
-          <img src="Images/course1.jpeg" alt="Introduction to Programming" />
-        </div>
-        <h3>Introduction to Programming</h3>
-        <div class="course-info">
-          <p>Credits - 3</p>
-          <p>Total Hours - 90</p>
-        </div>
-      </div>
-      
-      <div class="course-item">
-        <div class="course-image">
-          <img src="Images/course2.jpg" alt="Introduction to Web Design" />
-        </div>
-        <h3>Introduction to Web Design</h3>
-        <div class="course-info">
-          <p>Credits - 3</p>
-          <p>Total Hours - 45</p>
-        </div>
-      </div>
-      
-      <div class="course-item">
-        <div class="course-image">
-          <img src="Images/course3.jpeg" alt="Database Management Systems" />
-        </div>
-        <h3>Database Management Systems</h3>
-        <div class="course-info">
-          <p>Credits - 3</p>
-          <p>Total Hours - 45</p>
-        </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        
+        <span id="cat1" class="target"></span>
+        <span id="cat2" class="target"></span>
+        <span id="cat3" class="target"></span>
+        <span id="cat4" class="target"></span>
     
-      <div class="course-item">
-        <div class="course-image">
-          <img src="Images/course4.jpeg" alt="Practical Programming Methodology" />
+        <div class="main">
+      
+            <div class="main-background"></div>
+            
+           
+            <img src="Images/cat1.jpg" alt="Grey Cat" class="cat-image cat1-image">
+            <img src="Images/cat2.jpg" alt="White Cat" class="cat-image cat2-image">
+            <img src="Images/cat3.jpg" alt="Orange and White Cat" class="cat-image cat3-image">
+            <img src="Images/cat4.jpg" alt="Orange Tabby Cat" class="cat-image cat4-image">
         </div>
-        <h3>Practical Programming Methodology</h3>
-        <div class="course-info">
-          <p>Credits - 3</p>
-          <p>Total Hours - 45</p>
+        
+        <div class="right-menu">
+            <a href="#cat1">
+                <img src="Images/cat1.jpg" alt="Grey cat">
+                <span class="clue">cat1: click me to see more</span>
+            </a>
+            <a href="#cat2">
+                <img src="Images/cat2.jpg" alt="White cat">
+                <span class="clue">cat2: click me to see more</span>
+            </a>
+            <a href="#cat3">
+                <img src="Images/cat3.jpg" alt="Orange and white cat">
+                <span class="clue">cat3: click me to see more</span>
+            </a>
+            <a href="#cat4">
+                <img src="Images/cat4.jpg" alt="Orange tabby cat">
+                <span class="clue">cat4: click me to see more</span>
+            </a>
         </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>&copy; 2025 CS NWP Programs</p>
-      <p>Made for NWP with ❤️ and CSS Grid</p>
-    </footer>
-  </body>
+        
+        <div class="footer">
+            Midterm - Winter 2025 - Student's last name
+        </div>
+    </div>
+</body>
 </html>
