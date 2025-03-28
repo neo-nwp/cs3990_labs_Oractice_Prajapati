@@ -1,201 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  margin: 0;
+  background-color: #f0f0f0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
-.header {
-  background: url('../Images/cs_bg.jpeg') no-repeat center center/cover;
-  color: rgb(255, 255, 255);
-  padding: 100px 20px;
-  text-align: center;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  align-items: center;
+#app {
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.banner {
-  position: relative;
-  z-index: 1;
-}
-
-.banner h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: rgb(255, 0, 106);
-}
-
-.banner p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-.nav-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin: 1rem;
-  background: #3498db;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-  background: #2980b9;
-  color: #ecf0f1;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #3498db; /* Default blue */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  text-align: center;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.btn:hover {
-  background-color: #a3d5ff; /* Light blue on hover */
-  color: rgba(0, 0, 0, 0.7); /* Transparent black text */
-}
-
-.program-card {
-  background: #f8f9fa;
-  padding: 1.5rem;
+.news-card {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fafafa;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.program-card:hover {
-  transform: translateY(-5px);
-}
-
-.program-card .image-container {
-  position:relative;  
-  margin-bottom: 1rem;
-}
-
-.program-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-top-left-radius: 8px; /* Rounded top-left corner */
-  border-top-right-radius: 8px;
-}
-
-.program-card h2 {
-  position: absolute;
-  bottom: 0.5rem;
-  left: 0;
-  right: 0;
-  color: white;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.7);
-  margin: 0;
-}
-
-.program-card p {
-  margin-top: 0.5rem;
-}
-
-.programs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  flex-grow: 1;
-  margin: 0 auto;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.course-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  padding: 0.5rem;
-}
-
-.course-image {
-  width: 100%;
-  height: 150px;
-  transition: transform 0.3s ease;
-  margin-bottom: 1rem;
-}
-
-.course-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-}
-
-.course-item:hover .course-image {
-  transform: scale(1.2);
-  z-index: 1;
-  transform-origin: center center;
-}
-
-.course-item h3 {
-  font-size: clamp(0.8rem, 2vw, 1rem);
-  margin: 0;
-  padding: 0;
-  margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 2;
-}
-
-.course-info {
-  display: none;
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-  color: #666;
-  position: relative;
-  z-index: 2;
-}
-
-.course-info p {
-  margin: 0;
-  line-height: 1.2;
-}
-
-.course-item:hover .course-info {
+.news-card img {
   display: block;
+  margin: 10px 0;
 }
-.footer {
-  background: #000051;
+
+.hidden {
+  opacity: 0.5;
+  color: darkgray;
+  background-color: lightgray;
+}
+
+.stars {
+  color: gold;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4caf50;
   color: white;
-  font-size: small;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  position: fixed;
-  bottom: 0; 
-  width: 100%; 
-  z-index: 1000; 
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: default;
 }
