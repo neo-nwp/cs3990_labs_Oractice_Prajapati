@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   max-width: 800px;
@@ -212,6 +213,157 @@ h2 {
   transition: transform 0.2s;
 }
 
+
 .color-btn:hover {
   transform: scale(1.05);
 }
+=======
+button:disabled {
+  background-color: #999;
+  cursor: default;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  grid-template-rows: repeat(3, minmax(120px, 1fr)) 1fr; 
+  grid-template-areas:
+      "main right"
+      "main right"
+      "main right"
+      "footer right";
+  min-height: 100vh;
+  height: 100%;
+  gap: 5px;
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.main {
+  grid-area: main;
+  background-color: #e6d7e6;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.main-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../Images/main_cat.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.right-menu {
+  grid-area: right;
+  background-color: #d40000;
+  padding: clamp(5px, 2vw, 10px);
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: clamp(5px, 1vw, 10px);
+  min-width: 0;
+}
+
+.right-menu a {
+  background: white;
+  padding: clamp(2px, 1vw, 5px);
+  min-height: 0;
+  min-width: 0;
+  position: relative; 
+  display: block;
+}
+
+.right-menu img {
+  display: inline-block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Clue tooltip styling */
+.right-menu a .clue {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  white-space: nowrap;
+  font-size: 14px;
+  color: black;
+  padding: 5px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease, left 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Show clue on hover */
+.right-menu a:hover .clue {
+  opacity: 1;
+  left: calc(100% + 10px);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #d40000;
+  color: white;
+  text-align: center;
+  padding: clamp(5px, 2vh, 15px);
+  font-family: Arial, sans-serif;
+  font-size: clamp(12px, 2vw, 14px);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+/* Cat images styling */
+.cat-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%;
+  max-height: 50%;
+  display: none;
+  z-index: 2;
+}
+
+/* Show/hide images based on clicked menu item */
+#cat1:target ~ .main .cat1-image {
+  display: block;
+}
+
+#cat2:target ~ .main .cat2-image {
+  display: block;
+}
+
+#cat3:target ~ .main .cat3-image {
+  display: block;
+}
+
+#cat4:target ~ .main .cat4-image {
+  display: block;
+}
+
+/* Hide target anchors */
+.target {
+  display: none;
+}
+
